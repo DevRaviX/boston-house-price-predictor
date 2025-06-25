@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Boston House Price Prediction</title>
+</head>
+<body>
+    <h2>Enter the House Features</h2>
+    <form method="POST" action="/predict">
+        <input type="text" name="CRIM" placeholder="CRIM" required><br>
+        <input type="text" name="ZN" placeholder="ZN" required><br>
+        <!-- Add other 11 fields similarly -->
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
